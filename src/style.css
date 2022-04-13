@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-neon: rgb(255, 94, 20);
+    --clr-bg: rgb(255, 1, 1);
+  }
+
+html,
+body
+{
+    overflow: hidden;
+}
+
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.enableEthereumButton
+{
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    left: 90%;
+}
+
+.enableEthereumButton.connected
+{
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+}
+
+.fire{
+    font-family: 'Redressed', cursive;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+
+    color:#ffeb3b;
+    font-weight: 500;
+
+    filter: url(#fire);
+
+    font-size: 3em;
+
+    -webkit-box-reflect:below -100% linear-gradient(transparent, #0001);
+
+    text-shadow: 0 0 10px #ff8c3b,
+    0 0 40px #ff8c3b,
+    0 0 80px #ff793b,
+    0 0 160px red;
+}
+
+/**
+Mint Nodes
+*/
+.mn
+{
+    position: absolute;
+    left: -32%;
+    top:56.5%;
+}
+
+/**
+My Nodes
+*/
+.myn
+{
+    position: absolute;
+    top:4%;
+    left: -32%;
+}
+
+/**
+My Tokens
+*/
+.mt
+{
+    position: absolute;
+    top:56.5%;
+}
+
+/**
+ Total Nodes
+*/
+.tn
+{
+    position: absolute;
+    left: 32%;
+    top:4%;
+}
+
+/**
+Node Rewards
+*/
+.nr
+{
+    position: absolute;
+    top:4%;   
+}
+
+.hidden
+{
+    opacity: 0;
+}
+
+/**
+Node buttons
+*/
+
+.btn
+{
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#cerberus 
+{
+    top:90%;
+    left:30%;
+    background-color:red;
+}
+
+#hellhound
+{
+    top:90%;
+    left:40%;
+    background-color:#ff7300;
+}
+
+#revenant
+{
+    top:90%;
+    left:50%;
+    background-color:cyan;
+}
+
+#leviathan
+{
+    top:90%;
+    left:60%;
+    background-color:magenta;
+}
+
+#imp
+{
+    top:90%;
+    left:70%;
+    background-color:green;
+}
+
+#back{
+    left:10%;
+    background-color: blue;
+}
+
+:root {
+    --clr-neon: hsl(317 100% 54%);
+    --clr-bg: hsl(323 21% 16%);
+  }
+  
+  .neon-button {
+    font-size: 1rem;
+  
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+  
+    top: 5px;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+  
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+  
+    position: relative;
+  }
+  
+  .neon-button::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--clr-neon);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1em);
+    opacity: 0.7;
+  }
+  
+  .neon-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-neon);
+    opacity: 0;
+    background-color: var(--clr-neon);
+    z-index: -1;
+    transition: opacity 100ms linear;
+  }
+  
+  .neon-button:hover,
+  .neon-button:focus {
+    color: var(--clr-bg);
+    text-shadow: none;
+  }
+  
+  .neon-button:hover::before,
+  .neon-button:focus::before {
+    opacity: 1;
+  }
+  .neon-button:hover::after,
+  .neon-button:focus::after {
+    opacity: 1;
+  }
+  

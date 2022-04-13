@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus Node App</title>
+    <link rel="icon" type="icon" href="./cer.ico"></link>
+</head>
+<body>
+    <canvas class="webgl"></canvas>
+    <button class="enableEthereumButton neon-button" id="enableEthereumButton">Connect</button>
+
+    <div id="frontDapp" class="">
+        <div class="fire mn" id="mn">
+            Mint Nodes
+            <br/>
+            <br/>
+            Click here...
+        </div>
+        <div class="fire nr">
+            Node Rewards
+            <br/>
+            <br/>
+            Click here to claim...
+            <div class="nr-text">0</div>
+        </div>
+        <div class="fire myn">
+            My Nodes
+            <br/>
+            <br/>
+            <div class="myn-text">0</div>
+        </div>
+        <div class="fire tn">
+            Total Nodes
+            <br/>
+            <br/>
+            <div class="tn-text">0</div>
+        </div>
+        <div class="fire mt">
+            My Tokens
+            <br/>
+            <br/>
+            <div class="mt-text">0</div>
+        </div>
+    </div>
+    
+    <div id="nodes" class="hidden">
+        <div class="btn" id="back">Back</div>
+        <div class="btn" id="imp">Mint Imp</div>
+        <div class="btn" id="leviathan">Mint Leviathan</div>
+        <div class="btn" id="revenant">Mint Revenant</div>
+        <div class="btn" id="hellhound">Mint Hellhound</div>
+        <div class="btn" id="cerberus">Mint Cerberus</div>
+    </div>
+    <svg>
+        <filter id="fire">
+            <feTurbulence id="turbulence" baseFrequency="0.1 0.1" numOctaves="2" seed="3">
+                <animate attributeName="baseFrequency" dur="10s" values="0.1 0.1;0.12 0.12" repeatCount="indefinite"></animate>
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" scale="3"></feDisplacementMap>
+        </filter>
+    </svg>
+
+</body>
+</html>
